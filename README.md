@@ -25,7 +25,7 @@ You should now have all the plugin files under
 
 # Languages included
 
-Prism.js supports currently [176 languages](http://prismjs.com/#languages-list), at the time of this edit, but the ones included in this specific version is:
+Prism.js supports currently [176 languages](http://prismjs.com/#languages-list), at the time of this edit, but the ones included in this specific version are:
 
 * markup
 * html
@@ -75,31 +75,31 @@ This build of Prism also includes the following plugins:
 
 In your markdown, you can create a block of code, and assign the language to it. You can choose between the list above. Example:
 
-```
 ```php
-<?php
-
-namespace Grav\Plugin;
-
-use \Grav\Common\Plugin;
-use \Grav\Common\Grav;
-use \Grav\Common\Page\Page;
-
-class PrismHighlightPlugin extends Plugin
-{
-    /**
-     * @return array
-     */
-    public static function getSubscribedEvents()
-    {
-        return [
-            'onPageInitialized' => ['onPageInitialized', 0],
-            'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
-            'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-        ];
-    }
-}
-```
+  ```php
+  <?php
+  
+  namespace Grav\Plugin;
+  
+  use \Grav\Common\Plugin;
+  use \Grav\Common\Grav;
+  use \Grav\Common\Page\Page;
+  
+  class PrismHighlightPlugin extends Plugin
+  {
+      /**
+       * @return array
+       */
+      public static function getSubscribedEvents()
+      {
+          return [
+              'onPageInitialized' => ['onPageInitialized', 0],
+              'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
+              'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
+          ];
+      }
+  }
+  ```
 ```
 
 # Advanced Usage
@@ -113,6 +113,8 @@ To get access to advanced options that can be set individually, you can use the 
 [/prism]
 ```
 
+for line numbers, or:
+
 ```
 [prism classes="language-bash command-line" cl-prompt="\[foo@localhost\] $"]
 cd ~/webroot
@@ -120,7 +122,26 @@ git clone -b master https://github.com/getgrav/grav.git
 [/prism]
 ```
 
-... more to come ...
+for a command prompt, or:
+
+```
+[prism classes="language-yaml" highlight="2,4"]
+enabled: true
+theme: prism-base16-ocean.dark.css
+all-pre-blocks: true
+plugins:
+    line-numbers: false
+    command-line: false
+    command-line-prompt: '$'
+[/prism]
+```
+
+to highlight lines 2 and 4.
+
+Find out more about these options by checking out the [Prism.js plugins page](https://prismjs.com/#plugins). 
+
+
+
 
 # Configuration
 
@@ -136,7 +157,20 @@ plugins:
     command-line-prompt: '$'
 ```
 
-You can also override the default theme for a page with the option `theme`:
+You can also override configuration settings at the page level by prefixing options with `prism-highlight:`. For example you could set a different theme, and turning on line numbers on a particular page with:
+
+```yaml
+title: My Page
+prism-highlight:
+    theme: base16-duotone-dark.light.css
+    plugins:
+        line-numbers: true
+```
+
+
+### Themes
+
+The themes available are:
 
 ```
 base16-duotone-dark.dark.css
