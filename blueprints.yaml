@@ -1,14 +1,14 @@
 name: Prism Highlighter
 version: 1.0.0
-description: "This plugin provides code highlighting functionality via the [Prism.js](http://prismjs.com/) syntax highlighter."
+description: "This plugin provides code highlighting functionality via the [Prism.js](http://prismjs.com/) syntax highlighter with lots of themes and plugins."
 icon: code
 author:
-    name: Team Grav
-    email: devs@getgrav.org
-    url: http://getgrav.org
-homepage: https://github.com/getgrav/grav-prism-highlight
-keywords: highlight, plugin, code, prism
-bugs: https://github.com/getgrav/grav-prism-highlight/issues
+    name: Trilby Media
+    email: hello@trilby.media
+    url: https://trilby.media
+homepage: https://github.com/trilbymedia/grav-prism-highlight
+keywords: highlight, plugin, code, prism.js
+bugs: https://github.com/trilbymedia/grav-prism-highlight/issues
 license: MIT
 
 form:
