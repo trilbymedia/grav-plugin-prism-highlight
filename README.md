@@ -73,7 +73,9 @@ This build of Prism also includes the following plugins:
 
 # Basic Usage
 
-In your markdown, you can create a block of code, and assign the language to it. You can choose between the list above. Example:
+In your markdown, you can create a block of code, and assign the language to it. You can choose between the list above. 
+
+Example using regular markdown fenced code syntax:
 
 ```php
   ```php
@@ -99,7 +101,6 @@ In your markdown, you can create a block of code, and assign the language to it.
           ];
       }
   }
-  ```
 ```
 
 # Advanced Usage
