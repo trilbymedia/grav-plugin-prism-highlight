@@ -36,7 +36,7 @@ Prism.js supports currently [176 languages](http://prismjs.com/#languages-list),
 * css-extras
 * c-lik
 * javascript, js
-* apache
+* apacheconf
 * bash
 * sh
 * coffee
