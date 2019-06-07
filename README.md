@@ -34,14 +34,13 @@ Prism.js supports currently [176 languages](http://prismjs.com/#languages-list),
 * mathml
 * css
 * css-extras
-* c-lik
+* clike
 * javascript, js
-* apache
-* bash
-* sh
-* coffee
+* apacheconf
+* bash, shell
+* coffeescript, coffee
 * diff
-* docker
+* docker, dockerfile
 * git
 * go
 * java
@@ -49,17 +48,17 @@ Prism.js supports currently [176 languages](http://prismjs.com/#languages-list),
 * json5
 * less
 * lua
-* markdown
+* markdown, md
 * php
 * php-extras
-* python
+* python, py
 * regex
-* ruby
+* ruby, rb
 * sass
 * scss
 * sql
 * twig
-* yaml
+* yaml, yml
 
 # Plugins Included
 
