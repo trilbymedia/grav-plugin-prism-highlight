@@ -71,21 +71,34 @@ class PrismHighlightPlugin extends Plugin
         $this->grav['assets']->addCss('plugin://prism-highlight/css/themes/' . $theme);
         $this->grav['assets']->addJs('plugin://prism-highlight/js/prism.js', null, true, null, 'bottom');
 
-        $inline = '';
+        $all_pre_blocks = $this->config->get('plugins.prism-highlight.all-pre-blocks');
+        $line_numbers = $this->config->get('plugins.prism-highlight.plugins.line-numbers');
+        $command_line = $this->config->get('plugins.prism-highlight.plugins.command-line');
+
+        $inline = "";
+
+        if ($all_pre_blocks || $line_numbers || $command_line) {
+            $inline .= "var __prism_nodes = null;\n";
+        }
 
         // Always add at least plain text language
-        if ($this->config->get('plugins.prism-highlight.all-pre-blocks')) {
-            $inline .= "$('pre:not([class*=\'language-\'])').addClass('language-txt');\n";
+        if ($all_pre_blocks) {
+            $inline .= "__prism_nodes = document.querySelectorAll('pre:not([class*=\"language-\"])');\n";
+            $inline .= $this->_addJsClass('language-txt');
         }
 
-        // Line Numbers management
-        if ($this->config->get('plugins.prism-highlight.plugins.line-numbers')) {
-            $inline .= "$('pre').addClass('line-numbers');\n";
-        }
+        xdebug_break();
+        // Line Numbers management || Command Line management
+        if ($line_numbers || $command_line) {
+            $inline .= "__prism_nodes = document.querySelectorAll('pre');\n";
 
-        // Command Line management
-        if ($this->config->get('plugins.prism-highlight.plugins.command-line')) {
-            $inline .= "$('pre').addClass('command-line');\n";
+            if ($line_numbers) {
+                $inline .= $this->_addJsClass('line-numbers');
+            }
+
+            if ($command_line) {
+                $inline .= $this->_addJsClass('command-line');
+            }
         }
 
         if ($inline) {
@@ -105,5 +118,9 @@ class PrismHighlightPlugin extends Plugin
         }
 
         return $options;
+    }
+
+    private function _addJsClass($class = '') {
+        return "__prism_nodes.forEach(function(node) { node.classList.add('" . $class . "'); });\n";
     }
 }
