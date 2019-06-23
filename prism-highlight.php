@@ -87,7 +87,6 @@ class PrismHighlightPlugin extends Plugin
             $inline .= $this->_addJsClass('language-txt');
         }
 
-        xdebug_break();
         // Line Numbers management || Command Line management
         if ($line_numbers || $command_line) {
             $inline .= "__prism_nodes = document.querySelectorAll('pre');\n";
