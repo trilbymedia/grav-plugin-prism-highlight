@@ -1,5 +1,5 @@
 # v1.0.2
-## mm/dd/2019
+## 06/22/2019
 
 1. [](#bugfix)
     * Removed xdebug statement
