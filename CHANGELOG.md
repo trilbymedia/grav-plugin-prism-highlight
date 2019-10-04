@@ -5,7 +5,7 @@
     * Updated PrismJS 1.16.0 to 1.17.1
 
 2. [](#new)
-    * Added Batch language
+    * Added Batch, C and TypeScript languages
     
 ## 06/22/2019
 
