@@ -35,8 +35,6 @@ Prism.js supports currently [176 languages](http://prismjs.com/#languages-list),
 * CSS
 * C-Like, clike
 * JavaScript, js
-
-
 * Apache Configuration, apacheconf
 * Bash + Shell
 * Batch
@@ -83,8 +81,7 @@ In your markdown, you can create a block of code, and assign the language to it.
 Example using regular markdown fenced code syntax:
 
 ```php
-  ```php
-  <?php
+<?php
   
   namespace Grav\Plugin;
   
