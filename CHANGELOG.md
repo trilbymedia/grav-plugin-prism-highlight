@@ -1,4 +1,12 @@
-# v1.0.2
+# v1.1.0
+## 10/04/2019
+
+1. [](#improved)
+    * Updated PrismJS 1.16.0 to 1.17.1
+
+2. [](#new)
+    * Added Batch language
+    
 ## 06/22/2019
 
 1. [](#bugfix)
