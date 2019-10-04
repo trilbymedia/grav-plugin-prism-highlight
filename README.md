@@ -27,38 +27,44 @@ You should now have all the plugin files under
 
 Prism.js supports currently [176 languages](http://prismjs.com/#languages-list), at the time of this edit, but the ones included in this specific version are:
 
-* markup
-* html
-* xml
-* svg
-* mathml
-* css
-* css-extras
-* clike
-* javascript, js
-* apacheconf
-* bash, shell
-* coffeescript, coffee
-* diff
-* docker, dockerfile
-* git
-* go
-* java
-* json
-* json5
-* less
-* lua
-* markdown, md
-* php
-* php-extras
-* python, py
-* regex
-* ruby, rb
-* sass
-* scss
-* sql
-* twig
-* yaml, yml
+* Markup
+* HTML
+* XML
+* SVG
+* MathML
+* CSS
+* C-Like, clike
+* JavaScript, js
+
+
+* Apache Configuration, apacheconf
+* Bash + Shell
+* Batch
+* C, c-language
+* CoffeeScript, coffee
+* CSS Extras, css-extras
+* Diff
+* Docker, dockerfile
+* Git
+* Go
+* Java
+* JSON
+* JSON5
+* Less
+* Lua
+* Markdown, md
+* Markup templating
+* PHP
+* PHP Extras, php-extras
+* Python, py
+* Regex
+* Ruby, rb
+* Sass
+* Scss
+* SQL
+* Twig
+* TypeScript
+* YAML, yml
 
 # Plugins Included
 
