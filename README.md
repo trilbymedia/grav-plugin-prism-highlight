@@ -54,6 +54,7 @@ Prism.js supports currently [176 languages](http://prismjs.com/#languages-list),
 * Markup templating
 * PHP
 * PHP Extras, php-extras
+* PowerShell
 * Python, py
 * Regex
 * Ruby, rb

@@ -6,6 +6,10 @@
 
 2. [](#new)
     * Added Batch, C and TypeScript languages
+
+3. [](#bugfix)
+    * Fixed issue [#4](https://github.com/trilbymedia/grav-plugin-prism-highlight/issues/4)
+      > Added PowerShell language support
     
 ## 06/22/2019
 
