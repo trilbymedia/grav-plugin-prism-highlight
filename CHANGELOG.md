@@ -1,3 +1,9 @@
+# v1.0.3
+## mm/dd/2020
+
+1. [](#improved)
+    * Updated to latest PrismJS `v1.22.0`
+
 # v1.0.2
 ## 06/22/2019
 
