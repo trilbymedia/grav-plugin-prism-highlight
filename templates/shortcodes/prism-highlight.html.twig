@@ -1,5 +1,6 @@
 <div class="prism-wrapper">
 <pre class="{{ classes }}"
+    {% if id %}id={{ id }}{% endif %}
     {% if cl_output %}data-output="{{ cl_output }}"{% endif %}
     {% if cl_prompt %}data-prompt="{{ cl_prompt }}"{% endif %}
     {% if ln_start %}data-start="{{ ln_start }}"{% endif %}

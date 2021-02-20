@@ -4,7 +4,7 @@
 
 # Installation
 
-Installing the Highlight plugin can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file. 
+Installing the Highlight plugin can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file.
 
 ## GPM Installation (Preferred)
 
@@ -72,20 +72,20 @@ This build of Prism also includes the following plugins:
 
 # Basic Usage
 
-In your markdown, you can create a block of code, and assign the language to it. You can choose between the list above. 
+In your markdown, you can create a block of code, and assign the language to it. You can choose between the list above.
 
 Example using regular markdown fenced code syntax:
 
 ```php
   ```php
   <?php
-  
+
   namespace Grav\Plugin;
-  
+
   use \Grav\Common\Plugin;
   use \Grav\Common\Grav;
   use \Grav\Common\Page\Page;
-  
+
   class PrismHighlightPlugin extends Plugin
   {
       /**
@@ -138,7 +138,7 @@ plugins:
 
 to highlight lines 2 and 4.
 
-Find out more about these options by checking out the [Prism.js plugins page](https://prismjs.com/#plugins). 
+Find out more about these options by checking out the [Prism.js plugins page](https://prismjs.com/#plugins).
 
 
 

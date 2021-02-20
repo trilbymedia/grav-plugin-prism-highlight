@@ -15,7 +15,9 @@ class PrismShortcode extends Shortcode
 
             $content = $sc->getContent();
             $classes = $sc->getParameter('classes', $this->getBbCode($sc)) ?: 'language-text';
+            $id = $sc->getParameter('id');
             $highlight_lines = $sc->getParameter('highlight');
+
 
             $enable_line_numbers = (bool) Utils::contains($classes, 'line-numbers') ?: $config->get('plugins.line-numbers');
             $enable_command_line = (bool) Utils::contains($classes, 'command-line') ?: $config->get('plugins.command-line');
@@ -27,6 +29,7 @@ class PrismShortcode extends Shortcode
             $output = $this->twig->processTemplate('shortcodes/prism-highlight.html.twig', [
                 'content' => trim($content),
                 'classes' => $classes,
+                'id' => $id,
                 'enable_line_numbers' => $enable_line_numbers,
                 'enable_command_line' => $enable_command_line,
                 'cl_prompt' => $cl_prompt,
