@@ -5,7 +5,7 @@
     * Added Support for Git URLs to grab and embed git files
     * Support for `linkable-line-numbers` but does require a unique `id` to be set on the element.
 1. [](#improved)
-    * Upgraded to latest Prism.JS version (with fixes)
+    * Upgraded to latest 1.23.0 Prism.JS version (with fixes)
 
 # v1.0.2
 ## 06/22/2019
