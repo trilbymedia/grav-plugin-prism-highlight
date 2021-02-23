@@ -1,5 +1,5 @@
 name: Prism Highlighter
-version: 1.0.2
+version: 2.0.0
 description: "This plugin provides code highlighting functionality via the [Prism.js](http://prismjs.com/) syntax highlighter with lots of themes and plugins."
 icon: code
 author:
