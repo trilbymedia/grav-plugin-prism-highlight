@@ -106,6 +106,8 @@ Example using regular markdown fenced code syntax:
 
 To get access to advanced options that can be set individually, you can use the included `[prism][/prism]` shortcode:
 
+For line numbers:
+
 ```
 [prism classes="language-twig line-numbers"]
 {% set payload = {frontmatter: page.header, content: page.content}  %}
@@ -113,7 +115,18 @@ To get access to advanced options that can be set individually, you can use the 
 [/prism]
 ```
 
-for line numbers, or:
+You can also now add the `linkable-line-numbers` class to make the line numbers directly linkable.  You need to provide an `id` on the Prism element so that there is something to link against.
+
+For example:
+
+```
+[prism classes="language-twig line-numbers linkable-line-numbers" id="twig-example"]
+{% set payload = {frontmatter: page.header, content: page.content}  %}
+{{ payload|json_encode|raw }}
+[/prism]
+```
+
+For a command Prompt:
 
 ```
 [prism classes="language-bash command-line" cl-prompt="\[foo@localhost\] $"]
@@ -122,7 +135,7 @@ git clone -b master https://github.com/getgrav/grav.git
 [/prism]
 ```
 
-for a command prompt, or:
+For highlighting specific lines 2 and 4:
 
 ```
 [prism classes="language-yaml" highlight="2,4"]
@@ -136,12 +149,35 @@ plugins:
 [/prism]
 ```
 
-to highlight lines 2 and 4.
-
 Find out more about these options by checking out the [Prism.js plugins page](https://prismjs.com/#plugins).
 
 
+# Git File Support
 
+If you provide a `git="<url>"` parameter in the shortcode, the plugin will try to retrieve the 'raw' version of this file.  For example:
+
+```
+[prism git="https://github.com/getgrav/grav/blob/develop/system/router.php" classes="language-php line-numbers linkable-line-numbers" id="grav-router"]
+[/prism]
+```
+
+You can also provide the **raw** version directly:
+
+```
+[prism git="https://raw.githubusercontent.com/getgrav/grav/develop/system/router.php" classes="language-php line-numbers linkable-line-numbers" id="grav-router"]
+[/prism]
+```
+
+You can also slice the file to only show specific lines by passing a query parameter to the URL:
+
+* `slice=0:-2`	Show the first line up to and including the second to last line
+* `slice=24:100`	Show lines 24 through 100
+* `slice=0`	Show only the first line of the file
+
+```
+[prism git="https://github.com/getgrav/grav/blob/develop/system/router.php?slice=10:18" classes="language-php line-numbers linkable-line-numbers" id="grav-router"]
+[/prism]
+```
 
 # Configuration
 
