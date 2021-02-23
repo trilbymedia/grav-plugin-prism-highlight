@@ -1,5 +1,5 @@
 # v2.0.0
-## mm/dd/2020
+## 02/23/2020
 
 1. [](#new)
     * Added Support for Git URLs to grab and embed git files
