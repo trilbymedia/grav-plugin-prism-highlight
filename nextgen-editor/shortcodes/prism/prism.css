@@ -1,0 +1,7 @@
+shortcode-block[name="prism"] .sc-prism {
+  color: #666;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 8px 8px;
+  position: relative;
+}
