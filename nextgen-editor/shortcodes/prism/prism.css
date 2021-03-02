@@ -1,7 +1,10 @@
 shortcode-block[name="prism"] .sc-prism {
-  color: #666;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 8px 8px;
-  position: relative;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background: #EEEEEE;
+  color: #03486D;
+  padding: 1em;
+  border: 1px solid $c4c4c4;
+  white-space: pre-wrap;
+  tab-size: 4;
+  font-size: 0.9rem;
 }

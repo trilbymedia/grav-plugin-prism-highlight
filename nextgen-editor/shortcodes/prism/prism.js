@@ -48,7 +48,7 @@ window.nextgenEditor.addShortcode('prism', {
       .join(', ');
   },
   content({ attributes }) {
-    return `<pre><code>{{content_editable}}</code></pre>`
+    return `<div class="sc-prism">{{content_editable}}</div>`
   },
 });
 
