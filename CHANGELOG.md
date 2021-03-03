@@ -1,3 +1,9 @@
+# v2.0.1
+## mm/dd/2021
+
+1. [](#new)
+    * Added support for `cl-filter-output` and provided examples in the README.md
+
 # v2.0.0
 ## 02/23/2021
 

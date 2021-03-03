@@ -128,10 +128,38 @@ For example:
 
 For a command Prompt:
 
+If you don't provide a custom prompt, it will default to `$` for the command prompt.  Provide a custom prompt with the `cl-prompt` attribute.
+
 ```
 [prism classes="language-bash command-line" cl-prompt="\[foo@localhost\] $"]
 cd ~/webroot
 git clone -b master https://github.com/getgrav/grav.git
+[/prism]
+```
+
+You can also specify certain lines as output (won't be prefixed by prompt) using the `cl-output` attribute:
+
+```
+[prism classes="language-bash command-line" cl-prompt="[root@localhost]" cl-output="2-6"]
+ls -la
+total 2
+drwxr-xr-x   2 chris  chris     11 Jan 10 16:48 .
+drwxr--r-x  45 chris  chris     92 Feb 14 11:10 ..
+-rwxr-xr-x   1 chris  chris    444 Aug 25  2013 backup
+-rwxr-xr-x   1 chris  chris    642 Jan 17 14:42 deploy
+[/prism]
+```
+
+Alternatively you can use the `cl-filter-putput` to provide a lines with a specific prefix to filter out.  For example:
+
+```
+[prism classes="language-bash command-line" cl-prompt="[root@localhost]" cl-filter-output=">>"]
+ls -la
+>>total 2
+>>drwxr-xr-x   2 chris  chris     11 Jan 10 16:48 .
+>>drwxr--r-x  45 chris  chris     92 Feb 14 11:10 ..
+>>-rwxr-xr-x   1 chris  chris    444 Aug 25  2013 backup
+>>-rwxr-xr-x   1 chris  chris    642 Jan 17 14:42 deploy
 [/prism]
 ```
 
