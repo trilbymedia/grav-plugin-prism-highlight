@@ -31,6 +31,7 @@ class PrismShortcode extends Shortcode
             $ln_start = $sc->getParameter('ln-start');
             $cl_prompt = $sc->getParameter('cl-prompt', $config->get('plugins.command-line-prompt'));
             $cl_output = $sc->getParameter('cl-output');
+            $cl_filter_output = $sc->getParameter('cl-filter-output');
 
             return $this->twig->processTemplate('shortcodes/prism-highlight.html.twig', [
                 'content' => trim($content),
@@ -40,6 +41,7 @@ class PrismShortcode extends Shortcode
                 'enable_command_line' => $enable_command_line,
                 'cl_prompt' => $cl_prompt,
                 'cl_output' => $cl_output,
+                'cl_filter_output' => $cl_filter_output,
                 'ln_start' => $ln_start,
                 'highlight_lines' => $highlight_lines,
             ]);

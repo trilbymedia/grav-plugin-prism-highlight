@@ -128,10 +128,38 @@ For example:
 
 For a command Prompt:
 
+If you don't provide a custom prompt, it will default to `$` for the command prompt.  Provide a custom prompt with the `cl-prompt` attribute.
+
 ```
 [prism classes="language-bash command-line" cl-prompt="\[foo@localhost\] $"]
 cd ~/webroot
 git clone -b master https://github.com/getgrav/grav.git
+[/prism]
+```
+
+You can also specify certain lines as output (won't be prefixed by prompt) using the `cl-output` attribute:
+
+```
+[prism classes="language-bash command-line" cl-prompt="[root@localhost]" cl-output="2-6"]
+ls -la
+total 2
+drwxr-xr-x   2 chris  chris     11 Jan 10 16:48 .
+drwxr--r-x  45 chris  chris     92 Feb 14 11:10 ..
+-rwxr-xr-x   1 chris  chris    444 Aug 25  2013 backup
+-rwxr-xr-x   1 chris  chris    642 Jan 17 14:42 deploy
+[/prism]
+```
+
+Alternatively you can use the `cl-filter-putput` to provide a lines with a specific prefix to filter out.  For example:
+
+```
+[prism classes="language-bash command-line" cl-prompt="[root@localhost]" cl-filter-output=">>"]
+ls -la
+>>total 2
+>>drwxr-xr-x   2 chris  chris     11 Jan 10 16:48 .
+>>drwxr--r-x  45 chris  chris     92 Feb 14 11:10 ..
+>>-rwxr-xr-x   1 chris  chris    444 Aug 25  2013 backup
+>>-rwxr-xr-x   1 chris  chris    642 Jan 17 14:42 deploy
 [/prism]
 ```
 
@@ -223,6 +251,7 @@ base16-duotone-darksea.dark.css
 base16-duotone-darksea.light.css
 base16-duotone-darkspace.dark.css
 base16-duotone-darkspace.light.css
+prism-a11y-dark.css
 prism-atelier-cave-dark.css
 prism-atelier-cave-light.css
 prism-atelier-dune-dark.css
@@ -244,34 +273,6 @@ prism-atelier-seaside-light.css
 prism-atelier-sulphurpool-dark.css
 prism-atelier-sulphurpool-light.css
 prism-atom-dark.css
-prism-base2tone-cave-dark.css
-prism-base2tone-cave-light.css
-prism-base2tone-desert-dark.css
-prism-base2tone-desert-light.css
-prism-base2tone-drawbridge-dark.css
-prism-base2tone-drawbridge-light.css
-prism-base2tone-earth-dark.css
-prism-base2tone-earth-light.css
-prism-base2tone-evening-dark.css
-prism-base2tone-evening-light.css
-prism-base2tone-forest-dark.css
-prism-base2tone-forest-light.css
-prism-base2tone-heath-dark.css
-prism-base2tone-heath-light.css
-prism-base2tone-lake-dark.css
-prism-base2tone-lake-light.css
-prism-base2tone-meadow-dark.css
-prism-base2tone-meadow-light.css
-prism-base2tone-morning-dark.css
-prism-base2tone-morning-light.css
-prism-base2tone-pool-dark.css
-prism-base2tone-pool-light.css
-prism-base2tone-sea-dark.css
-prism-base2tone-sea-light.css
-prism-base2tone-space-dark.css
-prism-base2tone-space-light.css
-prism-base2tone-suburb-dark.css
-prism-base2tone-suburb-light.css
 prism-base16-3024.dark.css
 prism-base16-3024.light.css
 prism-base16-apathy.dark.css
@@ -358,6 +359,68 @@ prism-base16-tomorrow.dark.css
 prism-base16-tomorrow.light.css
 prism-base16-twilight.dark.css
 prism-base16-twilight.light.css
+prism-base2tone-cave-dark.css
+prism-base2tone-cave-light.css
+prism-base2tone-desert-dark.css
+prism-base2tone-desert-light.css
+prism-base2tone-drawbridge-dark.css
+prism-base2tone-drawbridge-light.css
+prism-base2tone-earth-dark.css
+prism-base2tone-earth-light.css
+prism-base2tone-evening-dark.css
+prism-base2tone-evening-light.css
+prism-base2tone-forest-dark.css
+prism-base2tone-forest-light.css
+prism-base2tone-heath-dark.css
+prism-base2tone-heath-light.css
+prism-base2tone-lake-dark.css
+prism-base2tone-lake-light.css
+prism-base2tone-meadow-dark.css
+prism-base2tone-meadow-light.css
+prism-base2tone-morning-dark.css
+prism-base2tone-morning-light.css
+prism-base2tone-pool-dark.css
+prism-base2tone-pool-light.css
+prism-base2tone-sea-dark.css
+prism-base2tone-sea-light.css
+prism-base2tone-space-dark.css
+prism-base2tone-space-light.css
+prism-base2tone-suburb-dark.css
+prism-base2tone-suburb-light.css
+prism-cb.css
+prism-coldark-cold.css
+prism-coldark-dark.css
+prism-coy-without-shadows.css
+prism-coy.css
+prism-darcula.css
+prism-dark.css
+prism-dracula.css
+prism-duotone-dark.css
+prism-duotone-earth.css
+prism-duotone-forest.css
+prism-duotone-light.css
+prism-duotone-sea.css
+prism-duotone-space.css
+prism-funky.css
+prism-ghcolors.css
+prism-gruvbox-dark.css
+prism-hopscotch.css
+prism-lucario.css
+prism-material-dark.css
+prism-material-light.css
+prism-material-oceanic.css
+prism-night-owl.css
+prism-nord.css
+prism-okaidia.css
+prism-pojoaque.css
+prism-shades-of-purple.css
+prism-solarizedlight.css
+prism-synthwave84.css
+prism-tomorrow.css
+prism-twilight.css
+prism-vs.css
+prism-vsc-dark-plus.css
+prism-xonokai.css
 ```
 
 Check out a [live test](http://prismjs.com/test.html) or a [live demo](http://prismjs.com/index.html#examples).

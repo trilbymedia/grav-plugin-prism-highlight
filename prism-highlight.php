@@ -17,6 +17,7 @@ class PrismHighlightPlugin extends Plugin
             'onPageInitialized' => ['onPageInitialized', 0],
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
+            'registerNextGenEditorPlugin' => ['registerNextGenEditorPluginShortcodes', 0],
         ];
     }
 
@@ -26,7 +27,6 @@ class PrismHighlightPlugin extends Plugin
     public function onPageInitialized()
     {
         if ($this->isAdmin()) {
-            $this->active = false;
             return;
         }
 
@@ -104,6 +104,15 @@ class PrismHighlightPlugin extends Plugin
             $this->grav['assets']->addInlineJs($inline, null, 'bottom');
         }
 
+    }
+
+    public function registerNextGenEditorPluginShortcodes($event) {
+        $plugins = $event['plugins'];
+        $plugins['js'][] = 'plugin://prism-highlight/nextgen-editor/shortcodes/prism/prism.js';
+        $plugins['css'][] = 'plugin://prism-highlight/nextgen-editor/shortcodes/prism/prism.css';
+
+        $event['plugins']  = $plugins;
+        return $event;
     }
 
     public static function themeOptions()
