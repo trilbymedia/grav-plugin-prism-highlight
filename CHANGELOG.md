@@ -1,8 +1,10 @@
 # v2.0.1
-## mm/dd/2021
+## 05/28/2021
 
 1. [](#new)
     * Added support for `cl-filter-output` and provided examples in the README.md
+    * Added 35 new themes
+    * Added support for custom `EcScript`  
 
 # v2.0.0
 ## 02/23/2021
