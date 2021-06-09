@@ -1,3 +1,9 @@
+# v2.0.2
+## mm/dd/2021
+
+1. [](#bugfix)
+   * Fixed a security issue that allowed the `git` param of shortcode to load local files (thanks xmco.fr)
+
 # v2.0.1
 ## 05/28/2021
 
