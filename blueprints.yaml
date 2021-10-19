@@ -6,9 +6,9 @@ author:
     name: Trilby Media
     email: hello@trilby.media
     url: https://trilby.media
-homepage: https://github.com/trilbymedia/grav-prism-highlight
+homepage: https://github.com/trilbymedia/grav-plugin-prism-highlight
 keywords: highlight, plugin, code, prism.js
-bugs: https://github.com/trilbymedia/grav-prism-highlight/issues
+bugs: https://github.com/trilbymedia/grav-plugin-prism-highlight/issues
 license: MIT
 
 form:
