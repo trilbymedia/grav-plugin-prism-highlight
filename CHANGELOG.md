@@ -1,7 +1,8 @@
 # v2.0.2
-## mm/dd/2021
+## 11/23/2021
 
 1. [](#bugfix)
+   * Fixed a CSS issue causing "Copy" button to have double styling
    * Fixed a security issue that allowed the `git` param of shortcode to load local files (thanks xmco.fr)
 
 # v2.0.1
