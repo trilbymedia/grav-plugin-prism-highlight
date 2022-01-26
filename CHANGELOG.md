@@ -1,5 +1,5 @@
 # v2.0.3
-## mm/dd/2022
+## 01/26/2022
 
 1. [](#improved)
     * Upgraded to latest 1.26.0 Prism.JS version (with fixes)
