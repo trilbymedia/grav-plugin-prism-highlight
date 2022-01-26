@@ -1,3 +1,10 @@
+# v2.0.3
+## 01/26/2022
+
+1. [](#improved)
+    * Upgraded to latest 1.26.0 Prism.JS version (with fixes)
+    * Added `C`, `C#`, and `C++` languages
+
 # v2.0.2
 ## 11/23/2021
 
