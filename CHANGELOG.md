@@ -1,3 +1,9 @@
+# v2.0.4
+## 01/27/2023
+
+1. [](#new)
+   * Added `bbcode`/`shortcode` language, compatible with Grav's Shortcodes plugin
+ 
 # v2.0.3
 ## 01/26/2022
 
