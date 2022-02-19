@@ -34,8 +34,13 @@ class PrismHighlightPlugin extends Plugin
 
         /** @var Page $page */
         $page = $this->grav['page'];
+        // wrong way - kept for compatibility
         if (isset($page->header()->prism)) {
             $this->config->set('plugins.prism-highlight', array_merge($defaults, $page->header()->prism));
+        }
+        // correct way as documented
+        if (isset($page->header()->{'prism-highlight'})) {
+            $this->config->set('plugins.prism-highlight', array_merge($defaults, $page->header()->{'prism-highlight'}));
         }
         if ($this->config->get('plugins.prism-highlight.enabled')) {
             $this->enable([
