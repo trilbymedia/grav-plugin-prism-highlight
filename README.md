@@ -30,6 +30,7 @@ Prism.js supports currently [176 languages](http://prismjs.com/#languages-list),
 * markup
 * html
 * xml
+* bbcode / shortcode
 * svg
 * mathml
 * css

@@ -1,5 +1,11 @@
+# v2.0.5
+## 02/18/2022
+
+1. [](#bugfix)
+   * Fixed bad page header tag `prism:` should be `prism-highlight:`
+
 # v2.0.4
-## 01/27/2023
+## 01/27/2022
 
 1. [](#new)
    * Added `bbcode`/`shortcode` language, compatible with Grav's Shortcodes plugin
