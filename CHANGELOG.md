@@ -1,5 +1,5 @@
 # v2.0.5
-## mm/dd/2022
+## 02/18/2022
 
 1. [](#bugfix)
    * Fixed bad page header tag `prism:` should be `prism-highlight:`
