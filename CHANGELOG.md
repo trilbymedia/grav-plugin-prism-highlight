@@ -1,3 +1,9 @@
+# v2.0.6
+## 02/22/2022
+
+1. [](#bugfix)
+    * Fixed issue with Twig templating
+    
 # v2.0.5
 ## 02/18/2022
 
