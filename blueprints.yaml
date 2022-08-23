@@ -75,5 +75,19 @@ form:
       size: small
       label: Command Line Prompt
 
+    section_advanced:
+      type: section
+      title: Advanced
+      underline: true
+      fields:
+        custom.js_location:
+          type: text
+          label: Custom JS location
+          default: user://data/prism-highlight/prism.js
+        custom.css_location:
+          type: text
+          label: Custom CSS location
+          default: user://data/prism-highlight/prism.css
+
 
 

@@ -1,6 +1,9 @@
 enabled: true
 theme: prism-base16-ocean.dark.css
 all-pre-blocks: true
+custom:
+    js_location: 'user://data/prism-highlight/prism.js'
+    css_location: 'user://data/prism-highlight/prism.css'
 plugins:
     line-numbers: false
     command-line: false

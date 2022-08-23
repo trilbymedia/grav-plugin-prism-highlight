@@ -1,3 +1,11 @@
+# v3.0.0
+## mm/dd/2022
+
+1. [](#new)
+    * Added support for custom-built JS and CSS files
+    * Instructions on how to modify/build/use custom-built JS and CSS files
+    * Upgraded to latest PrismJS `1.29.0`
+
 # v2.0.6
 ## 02/22/2022
 

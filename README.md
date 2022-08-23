@@ -216,6 +216,9 @@ Configuration shall be set in `config/plugins/prism-highlight.yaml`.
 enabled: true
 theme: prism-base16-ocean.dark.css
 all-pre-blocks: true
+custom:
+    js_location: 'user://data/prism-highlight/prism.js'
+    css_location: 'user://data/prism-highlight/prism.css'
 plugins:
     line-numbers: false
     command-line: false
@@ -426,4 +429,25 @@ prism-xonokai.css
 
 Check out a [live test](http://prismjs.com/test.html) or a [live demo](http://prismjs.com/index.html#examples).
 
+## Customization
 
+To customize the Prism you will need to customize the `prism.js` file.  This requires cloning our Forked repository (it contains some extra languages and styling tweaks) from: https://github.com/getgrav/prism
+
+Then run the following commands:
+
+```shell
+npm run build
+npm run start
+```
+
+The second command starts a built-in webserver.  Locate the `prism.js` file included in this plugin, and view the source, Find the build URL and paste that into your browser.  It should look something like:
+
+```
+http://127.0.0.1:8080/download.html#themes=prism&languages=markup+css+clike+javascript+apacheconf+bash+bbcode+c+csharp+cpp+coffeescript+css-extras+diff+docker+ecscript+git+go+java+json+json5+less+lua+markdown+markup-templating+php+php-extras+python+regex+ruby+sass+scss+sql+twig+yaml&plugins=line-highlight+line-numbers+command-line+toolbar+copy-to-clipboard
+```
+
+This pre-configures the languages, plugins, etc. 
+
+Make your changes, including adding additional languages, plugins etc.  Then click **DOWNLOAD JS** and **DOWNLOAD CSS** buttons and upload your copies to a safe location, e.g. `/user/data/prims-highlight/`.
+
+You can then edit the configuration of the `prism-highlight` plugin and point the `custom.js_location` and `custom.css_location` options to the custom file locations (default is already `user://data/prismjs` folder).

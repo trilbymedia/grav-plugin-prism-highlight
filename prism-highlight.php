@@ -71,10 +71,20 @@ class PrismHighlightPlugin extends Plugin
      */
     public function onTwigSiteVariables()
     {
+        $css = $this->config->get('plugins.prism-highlight.custom.css_location');
+        $js = $this->config->get('plugins.prism-highlight.custom.js_location');
+
+        if (!file_exists($css)) {
+            $css = 'plugin://prism-highlight/css/prism.css';
+        }
+        if (!file_exists($js)) {
+            $js = 'plugin://prism-highlight/js/prism.js';
+        }
+
         $theme = $this->config->get('plugins.prism-highlight.theme') ?: 'prism-default.css';
-        $this->grav['assets']->addCss('plugin://prism-highlight/css/prism.css');
+        $this->grav['assets']->addCss($css);
         $this->grav['assets']->addCss('plugin://prism-highlight/css/themes/' . $theme);
-        $this->grav['assets']->addJs('plugin://prism-highlight/js/prism.js', null, true, null, 'bottom');
+        $this->grav['assets']->addJs($js, null, true, null, 'bottom');
 
         $all_pre_blocks = $this->config->get('plugins.prism-highlight.all-pre-blocks');
         $line_numbers = $this->config->get('plugins.prism-highlight.plugins.line-numbers');
