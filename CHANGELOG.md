@@ -5,6 +5,7 @@
     * Added support for custom-built JS and CSS files
     * Instructions on how to modify/build/use custom-built JS and CSS files
     * Upgraded to latest PrismJS `1.29.0`
+    * Added 7 new themes: `gruvbox-light`, `holi-theme`, `laserwave`, `one-dark`, `one-light`, `soloarized-dark-atom`, and `z-touch`
 
 # v2.0.6
 ## 02/22/2022
