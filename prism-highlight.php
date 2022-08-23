@@ -71,10 +71,25 @@ class PrismHighlightPlugin extends Plugin
      */
     public function onTwigSiteVariables()
     {
-        $theme = $this->config->get('plugins.prism-highlight.theme') ?: 'prism-default.css';
-        $this->grav['assets']->addCss('plugin://prism-highlight/css/prism.css');
-        $this->grav['assets']->addCss('plugin://prism-highlight/css/themes/' . $theme);
-        $this->grav['assets']->addJs('plugin://prism-highlight/js/prism.js', null, true, null, 'bottom');
+        $selected_theme = $this->config->get('plugins.prism-highlight.theme') ?: 'prism-default.css';
+        $css = $this->config->get('plugins.prism-highlight.custom.css_location');
+        $theme = $this->config->get('plugins.prism-highlight.custom.theme_location');
+        $js = $this->config->get('plugins.prism-highlight.custom.js_location');
+
+        if (!file_exists($css)) {
+            $css = 'plugin://prism-highlight/css/prism.css';
+        }
+        if (!file_exists($theme)) {
+            $theme = 'plugin://prism-highlight/css/themes/' . $selected_theme;
+        }
+        if (!file_exists($js)) {
+            $js = 'plugin://prism-highlight/js/prism.js';
+        }
+
+
+        $this->grav['assets']->addCss($css);
+        $this->grav['assets']->addCss($theme);
+        $this->grav['assets']->addJs($js, null, true, null, 'bottom');
 
         $all_pre_blocks = $this->config->get('plugins.prism-highlight.all-pre-blocks');
         $line_numbers = $this->config->get('plugins.prism-highlight.plugins.line-numbers');
@@ -127,7 +142,7 @@ class PrismHighlightPlugin extends Plugin
         $theme_files = glob(__dir__ . '/css/themes/*.css');
         foreach ($theme_files as $theme_file) {
             $theme = basename($theme_file);
-            $options[$theme] = Inflector::titleize($theme);
+            $options[$theme] = Inflector::titleize(basename($theme, '.css'));
         }
 
         return $options;

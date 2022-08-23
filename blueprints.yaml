@@ -1,5 +1,7 @@
-name: Prism Highlighter
-version: 2.0.6
+name: Prism Highlight
+slug: prism-highlight
+type: plugin
+version: 3.0.0
 description: "This plugin provides code highlighting functionality via the [Prism.js](http://prismjs.com/) syntax highlighter with lots of themes and plugins."
 icon: code
 author:
@@ -28,7 +30,7 @@ form:
     theme:
       type: select
       label: CSS Theme
-      default: prism-base16-ocean.dark.css
+      default: prism-one-light.css
       size: large
       data-options@: '\Grav\Plugin\PrismHighlightPlugin::themeOptions'
 
@@ -74,6 +76,24 @@ form:
       type: text
       size: small
       label: Command Line Prompt
+
+    section_advanced:
+      type: section
+      title: Advanced
+      underline: true
+      fields:
+        custom.js_location:
+          type: text
+          label: Custom JS location
+          default: user://data/prism-highlight/prism.js
+        custom.css_location:
+          type: text
+          label: Custom CSS location
+          default: user://data/prism-highlight/prism.css
+        custom.theme_location:
+          type: text
+          label: Custom CSS location
+          default: user://data/prism-highlight/prism.css
 
 
 

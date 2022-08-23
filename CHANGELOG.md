@@ -1,3 +1,13 @@
+# v3.0.0
+## 08/23/2022
+
+1. [](#new)
+    * Added support for custom-built JS, CSS, and Theme files
+    * Instructions on how to modify/build/use custom-built JS and CSS files
+    * Upgraded to latest PrismJS `1.29.0`
+    * Added 7 new themes: `gruvbox-light`, `holi-theme`, `laserwave`, `one-dark`, `one-light`, `soloarized-dark-atom`, and `z-touch`
+    * Changed default theme to `prism-one-light.css`
+
 # v2.0.6
 ## 02/22/2022
 
