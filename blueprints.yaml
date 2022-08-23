@@ -28,7 +28,7 @@ form:
     theme:
       type: select
       label: CSS Theme
-      default: prism-base16-ocean.dark.css
+      default: prism-one-light.css
       size: large
       data-options@: '\Grav\Plugin\PrismHighlightPlugin::themeOptions'
 
@@ -85,6 +85,10 @@ form:
           label: Custom JS location
           default: user://data/prism-highlight/prism.js
         custom.css_location:
+          type: text
+          label: Custom CSS location
+          default: user://data/prism-highlight/prism.css
+        custom.theme_location:
           type: text
           label: Custom CSS location
           default: user://data/prism-highlight/prism.css

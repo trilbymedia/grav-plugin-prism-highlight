@@ -219,6 +219,7 @@ all-pre-blocks: true
 custom:
     js_location: 'user://data/prism-highlight/prism.js'
     css_location: 'user://data/prism-highlight/prism.css'
+    theme_location: 'user://data/prism-highlight/custom-theme.css'
 plugins:
     line-numbers: false
     command-line: false
@@ -408,7 +409,10 @@ prism-duotone-space.css
 prism-funky.css
 prism-ghcolors.css
 prism-gruvbox-dark.css
+prism-gruvbox-light.css
+prism-holi-theme.css
 prism-hopscotch.css
+prism-laserwave.css
 prism-lucario.css
 prism-material-dark.css
 prism-material-light.css
@@ -416,8 +420,11 @@ prism-material-oceanic.css
 prism-night-owl.css
 prism-nord.css
 prism-okaidia.css
+prism-one-dark.css
+prism-one-light.css
 prism-pojoaque.css
 prism-shades-of-purple.css
+prism-solarized-dark-atom.css
 prism-solarizedlight.css
 prism-synthwave84.css
 prism-tomorrow.css
@@ -425,11 +432,12 @@ prism-twilight.css
 prism-vs.css
 prism-vsc-dark-plus.css
 prism-xonokai.css
+prism-z-touch.css
 ```
 
 Check out a [live test](http://prismjs.com/test.html) or a [live demo](http://prismjs.com/index.html#examples).
 
-## Customization
+## Customizaton of languages, plugins and built-in themes
 
 To customize the Prism you will need to customize the `prism.js` file.  This requires cloning our Forked repository (it contains some extra languages and styling tweaks) from: https://github.com/getgrav/prism
 
