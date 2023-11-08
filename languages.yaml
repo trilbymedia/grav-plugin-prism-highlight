@@ -1,0 +1,11 @@
+en:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'Copy'
+    COPY_ERROR: 'Press Ctrl+C to copy'
+    COPY_SUCCESS: 'Copied!'
+
+pl:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'Kopiuj'
+    COPY_ERROR: 'Wciśnij Ctrl+C aby skopiować'
+    COPY_SUCCESS: 'Skopiowane!'
