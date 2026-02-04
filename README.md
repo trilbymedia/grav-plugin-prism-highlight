@@ -444,6 +444,7 @@ To customize the Prism you will need to customize the `prism.js` file.  This req
 Then run the following commands:
 
 ```shell
+npm ci
 npm run build
 npm run start
 ```
@@ -458,4 +459,4 @@ This pre-configures the languages, plugins, etc.
 
 Make your changes, including adding additional languages, plugins etc.  Then click **DOWNLOAD JS** and **DOWNLOAD CSS** buttons and upload your copies to a safe location, e.g. `/user/data/prims-highlight/`.
 
-You can then edit the configuration of the `prism-highlight` plugin and point the `custom.js_location` and `custom.css_location` options to the custom file locations (default is already `user://data/prismjs` folder).
+You can then edit the configuration of the `prism-highlight` plugin and point the `custom.js_location` and `custom.css_location` options to the custom file locations (default is already `user://data/prism-highlight` folder).
