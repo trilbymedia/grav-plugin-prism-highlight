@@ -53,7 +53,7 @@ class PrismShortcode extends Shortcode
     {
         $content = null;
         try {
-            $path = preg_replace(['#http[s]*:\/\/github.com\/#', '#\/blob\/#'], ['https://raw.github.com/', '/'], $path);
+            $path = preg_replace(['#http[s]*:\/\/github.com\/#', '#\/blob\/#'], ['https://raw.github.com/', '/'], (string) $path);
             preg_match('#\?slice=(.*)#', $path, $matches);
 
             // Ensure only 'extenral' URls are allowed..

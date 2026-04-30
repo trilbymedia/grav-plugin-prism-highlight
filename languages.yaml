@@ -1,0 +1,47 @@
+en:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'Copy'
+    COPY_ERROR: 'Press Ctrl+C to copy'
+    COPY_SUCCESS: 'Copied!'
+
+pl:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'Kopiuj'
+    COPY_ERROR: 'Wciśnij Ctrl+C aby skopiować'
+    COPY_SUCCESS: 'Skopiowane!'
+
+fr:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'Copier'
+    COPY_ERROR: 'Appuyez sur Ctrl+C pour copier'
+    COPY_SUCCESS: 'Copié!'
+
+es:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'Copiar'
+    COPY_ERROR: 'Presiona Ctrl+C para copiar'
+    COPY_SUCCESS: '¡Copiado!'
+
+pt:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'Copiar'
+    COPY_ERROR: 'Pressione Ctrl+C para copiar'
+    COPY_SUCCESS: 'Copiado!'
+
+it:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'Copia'
+    COPY_ERROR: 'Premi Ctrl+C per copiare'
+    COPY_SUCCESS: 'Copiato!'
+
+zh:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: '复制'
+    COPY_ERROR: '按Ctrl+C复制'
+    COPY_SUCCESS: '已复制!'
+
+ja:
+  PLUGIN_PRISM_HIGHLIGHT:
+    COPY: 'コピー'
+    COPY_ERROR: 'Ctrl+Cを押してコピー'
+    COPY_SUCCESS: 'コピーしました!'
