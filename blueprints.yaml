@@ -1,7 +1,7 @@
 name: Prism Highlight
 slug: prism-highlight
 type: plugin
-version: 3.0.1
+version: 3.0.2
 description: "This plugin provides code highlighting functionality via the [Prism.js](http://prismjs.com/) syntax highlighter with lots of themes and plugins."
 icon: code
 author:
