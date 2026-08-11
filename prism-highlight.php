@@ -89,7 +89,9 @@ class PrismHighlightPlugin extends Plugin
 
         $this->grav['assets']->addCss($css);
         $this->grav['assets']->addCss($theme);
-        $this->grav['assets']->addJs($js, null, true, null, 'bottom');
+        // prism.js is a pre-minified PrismJS build; its PHP-detection regex literal
+        // makes JShrink throw "Unclosed string", so keep it out of the JS pipeline (#19).
+        $this->grav['assets']->addJs($js, null, false, null, 'bottom');
 
         $all_pre_blocks = $this->config->get('plugins.prism-highlight.all-pre-blocks');
         $line_numbers = $this->config->get('plugins.prism-highlight.plugins.line-numbers');
