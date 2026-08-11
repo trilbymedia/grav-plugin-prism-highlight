@@ -1,5 +1,5 @@
 # v3.0.2
-## 08/10/2026
+## 08/11/2026
 
 1. [](#bugfix)
     * Excluded the pre-minified `prism.js` from Grav's JS pipeline so it no longer triggers a minification error.
