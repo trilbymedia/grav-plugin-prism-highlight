@@ -3,7 +3,7 @@ shortcode-block[name="prism"] .sc-prism {
   background: #EEEEEE;
   color: #03486D;
   padding: 1em;
-  border: 1px solid $c4c4c4;
+  border: 1px solid #c4c4c4;
   white-space: pre-wrap;
   tab-size: 4;
   font-size: 0.9rem;
